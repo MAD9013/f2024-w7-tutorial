@@ -1,0 +1,28 @@
+.navbar {
+  /*
+  Temporarily disabling styling in the header for the
+  sake of this lesson. We'll put it back in together.
+  */
+  position: unset;
+  z-index: unset;
+}
+
+.position-wrapper {
+}
+
+.box--positioned {
+}
+
+.box--absolute {
+}
+
+.box--fixed {
+}
+
+/* ---------- Centering ---------- */
+
+.position-centering {
+}
+
+.box--centered {
+}

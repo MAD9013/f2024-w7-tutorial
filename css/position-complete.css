@@ -1,0 +1,46 @@
+.navbar {
+  /*
+  Temporarily disabling styling in the header for the
+  sake of this lesson. We'll put it back in together.
+  */
+  position: unset;
+  z-index: unset;
+}
+
+.position-wrapper {
+  position: relative;
+}
+
+.box--positioned {
+  /* position: relative; */
+  position: sticky;
+  top: 2rem;
+  /* left: 2rem; */
+}
+
+.box--absolute {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+}
+
+.box--fixed {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+}
+
+/* ---------- Centering ---------- */
+
+.position-centering {
+  min-height: 30rem;
+  position: relative;
+}
+
+.box--centered {
+  display: inline-flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

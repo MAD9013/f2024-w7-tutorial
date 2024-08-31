@@ -1,0 +1,92 @@
+/* ---------- CSS Variables Basics ---------- */
+
+:root {
+  /* Colors */
+  --color-primary: #23272e;
+  --color-primary--light: #303641;
+  --color-primary--dark: #21252c;
+  --color-secondary: #54a04a;
+  --color-secondary--dark: #42813a;
+  --color-red: #d86972;
+  --color-red--dark: #a94c54;
+  --color-orange: #bb8b5e;
+  --color-green: #97c278;
+  --color-green--medium: #bedfa5;
+  --color-green--light: #c3e1ad;
+  --color-green--lighter: #c6e3b0;
+  --color-blue: #387bb2;
+  --color-blue--light: #8eb9dd;
+  --color-blue--dark: #2c6593;
+  --color-purple: #c678dd;
+  --color-purple--dark: #9c5bb0;
+
+  /* Fonts */
+  --font-primary: "Noto Sans", sans-serif;
+  --font-secondary: "Noto Serif", serif;
+
+  /* Sizing */
+  --container: 65em;
+  --container--text: 40em;
+
+  /* Standardization */
+  --transition: 0.2s;
+  --shadow: 0 0.25rem 0.75rem #0004;
+  --shadow--large: 0 0.5rem 1.5rem #0004;
+  --radius: 0.5em;
+}
+
+.text-primary {
+  color: var(--color-primary);
+}
+
+.text-secondary {
+  color: var(--color-secondary);
+}
+
+.color-scheme-alt {
+  --color-primary: #d42199;
+  --color-secondary: #4838b2;
+}
+
+/* ---------- Color Theming ---------- */
+
+.card-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.card {
+  /* Styles to be edited */
+  --color-card: var(--color-primary);
+  border: 0.25rem solid var(--color-card);
+  border-radius: var(--radius);
+  transition: all var(--transition);
+  box-shadow: var(--shadow);
+
+  /* Basic card styles */
+  display: block;
+  color: #000;
+  text-decoration: none;
+  overflow: hidden;
+  width: 100%;
+  flex: 1 1 15rem;
+}
+
+.card:hover,
+.card:focus-visible {
+  box-shadow: var(--shadow--large);
+}
+
+.card__title {
+  color: var(--color-card);
+}
+
+.card__content .btn {
+  background-color: var(--color-card);
+  border-color: var(--color-card);
+}
+
+.card--secondary {
+  --color-card: var(--color-secondary);
+}

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Ensures that the text characters are displayed properly -->
+    <meta charset="UTF-8" />
+
+    <!-- Properly sizes content across different browser window sizes -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--
+      The site title displayed in the browser tab.
+      Also used for Search Engine Optimization (SEO),
+      Google results, and accessibility tools/screen readers.
+    -->
+    <title>Math Functions | W6 - Custom Properties & Other Tidbits</title>
+
+    <!-- Loads custom supporting CSS stylesheet(s) -->
+    <link rel="stylesheet" href="./css/main.css" />
+
+    <!-- Loads lesson specific CSS stylesheet -->
+    <link rel="stylesheet" href="./css/math-functions.css" />
+
+    <!-- Loads Favicon -->
+    <link rel="shortcut icon" href="favicon.ico" />
+  </head>
+  <body id="page">
+    <!--
+      Accessibility feature that allows users to
+      quickly skip to key areas on the page.
+    -->
+    <ul class="skip-links">
+      <li>
+        <a class="skip-links__link" href="#nav">Skip to site navigation</a>
+      </li>
+      <li>
+        <a class="skip-links__link" href="#main">Skip to main content</a>
+      </li>
+    </ul>
+
+    <!--
+      Main site header. Features our site logo and navigation.
+    -->
+    <header class="navbar">
+      <div class="container">
+        <strong class="navbar__headline">
+          <a href="/" class="navbar__logo">
+            <span class="navbar__week">Week 6</span>
+            <span class="navbar__title">
+              Custom Properties &amp;&nbsp;Other&nbsp;Tidbits
+            </span>
+          </a>
+        </strong>
+        <button
+          class="navbar__toggle"
+          aria-label="Click to open mobile navigation"
+        >
+          <span class="navbar__tog navbar__tog--top"></span>
+          <span class="navbar__tog navbar__tog--middle"></span>
+          <span class="navbar__tog navbar__tog--bottom"></span>
+        </button>
+        <nav id="nav" class="navbar__nav">
+          <ul class="navbar__list">
+            <li>
+              <a href="./custom-properties.html" class="navbar__link">
+                Custom Properties
+              </a>
+            </li>
+            <li>
+              <a href="./position.html" class="navbar__link">Position</a>
+            </li>
+            <li>
+              <a
+                href="./math-functions.html"
+                class="navbar__link"
+                aria-current="page"
+              >
+                Math Functions
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!--
+      The main contains ALL of the content unique to this page.
+      Every page MUST have exactly one `main` that is a direct child of `body`.
+    -->
+    <main id="main">
+      <header class="banner">
+        <div class="container">
+          <div class="container--text">
+            <h1 class="banner__headline">Math Functions</h1>
+            <div class="banner__byline">
+              <p>
+                CSS has a number of built in math functions to allow use to
+                combine and compare values to simplify our css.
+              </p>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- 
+        ====================================================
+        ============== TUTORIAL CONTENT START ==============
+        ====================================================
+      -->
+
+      <section>
+        <div class="container">
+          <h2><code>calc()</code></h2>
+
+          <p>
+            <code>calc()</code> allows us to do basic calculations in our CSS
+            values.
+          </p>
+
+          <div class="parent calc-wrap">
+            <div class="box">Inner Box</div>
+          </div>
+
+          <h3>Spacing Utility Classes</h3>
+
+          <div class="text-example-1">
+            <h4 class="mx-0">Heading 1</h4>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia
+              similique autem minus ipsa, ut corrupti quam nesciunt est eum
+              labore voluptatibus saepe, et soluta sapiente vero, maxime
+              reiciendis sit voluptas!
+            </p>
+            <p>
+              Corrupti deserunt laboriosam impedit a veritatis blanditiis
+              cupiditate aliquam. Provident magnam, non nam vel tempora,
+              blanditiis nisi ipsam aut esse reprehenderit doloremque numquam
+              laudantium. Iure odit nobis aut molestiae blanditiis!
+            </p>
+          </div>
+          <div class="text-example-2">
+            <h4>Heading 2</h4>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque
+              provident id rem, architecto consequuntur animi perspiciatis
+              consequatur velit labore, aperiam culpa dolor voluptate illum?
+              Facilis laborum iste tempore. Saepe, quos?
+            </p>
+            <p>
+              Nobis quas et fugiat saepe sunt asperiores aliquam error odio vel,
+              rerum, itaque voluptas explicabo dolore nostrum soluta,
+              praesentium impedit. Accusamus ullam optio quae iste deleniti
+              repellendus, quaerat vero atque!
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <h2><code>clamp()</code></h2>
+
+          <div class="dynamic-type">
+            <h3>Dynamic Type</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae
+              error amet accusantium maxime voluptatem necessitatibus sunt
+              quisquam rerum. Doloremque repellendus soluta libero corporis
+              tempore quaerat voluptates odit necessitatibus natus quia.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <h2><code>min()</code></h2>
+          <p>
+            <code>min()</code> examines the two values provided and then uses
+            whichever value is smaller. It is great times when you want the
+            sizing of and element to be responsive and adapt to your screen size
+            changes, but want to limit the sizing. We've used to already for our
+            <code>.container</code> utility class.
+          </p>
+
+          <p>Another quick example:</p>
+
+          <div class="box box--min">min()</div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <h2><code>max()</code></h2>
+          <p>
+            <code>max()</code> is the same as <code>min()</code>, but picks the
+            larger value instead.
+          </p>
+
+          <div class="box box--max">max()</div>
+        </div>
+      </section>
+
+      <!-- 
+        ====================================================
+        =============== TUTORIAL CONTENT END ===============
+        ====================================================
+      -->
+    </main>
+
+    <!--
+      Site footer. Contains site logo and legal info.
+      
+      Could also contain other concluding information such
+      as repeating the navigation, contact info, and more.
+    -->
+    <footer class="footer">
+      <div class="container container--grid">
+        <div class="footer__column">
+          <a href="/" class="footer__logo">
+            <span class="footer__week">Week 6</span>
+            <span class="footer__title">
+              Custom Properties &amp;&nbsp;Other&nbsp;Tidbits
+            </span>
+          </a>
+        </div>
+
+        <div class="footer__column footer__column--legal">
+          <small>
+            Created for
+            <a href="https://mad9013.github.io/F2023/">MAD9013 course</a> and
+            free for any use.
+          </small>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Accessibility feature: return to top button -->
+    <a href="#page" class="to-top">To Top</a>
+
+    <!--
+      Adds a layer when the mobile navigation is open that
+      allows users to click to the side and auto close the nav
+    -->
+    <div class="click-to-close"></div>
+
+    <!-- Loads custom JavaScript file -->
+    <script src="./js/main.js"></script>
+  </body>
+</html>

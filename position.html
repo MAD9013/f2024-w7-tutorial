@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Ensures that the text characters are displayed properly -->
+    <meta charset="UTF-8" />
+
+    <!-- Properly sizes content across different browser window sizes -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--
+      The site title displayed in the browser tab.
+      Also used for Search Engine Optimization (SEO),
+      Google results, and accessibility tools/screen readers.
+    -->
+    <title>Position | W6 - Custom Properties & Other Tidbits</title>
+
+    <!-- Loads custom supporting CSS stylesheet(s) -->
+    <link rel="stylesheet" href="./css/main.css" />
+
+    <!-- Loads lesson specific CSS stylesheet -->
+    <link rel="stylesheet" href="./css/position.css" />
+
+    <!-- Loads Favicon -->
+    <link rel="shortcut icon" href="favicon.ico" />
+  </head>
+  <body id="page">
+    <!--
+      Accessibility feature that allows users to
+      quickly skip to key areas on the page.
+    -->
+    <ul class="skip-links">
+      <li>
+        <a class="skip-links__link" href="#nav">Skip to site navigation</a>
+      </li>
+      <li>
+        <a class="skip-links__link" href="#main">Skip to main content</a>
+      </li>
+    </ul>
+
+    <!--
+      Main site header. Features our site logo and navigation.
+    -->
+    <header class="navbar">
+      <div class="container">
+        <strong class="navbar__headline">
+          <a href="/" class="navbar__logo">
+            <span class="navbar__week">Week 6</span>
+            <span class="navbar__title">
+              Custom Properties &amp;&nbsp;Other&nbsp;Tidbits
+            </span>
+          </a>
+        </strong>
+        <button
+          class="navbar__toggle"
+          aria-label="Click to open mobile navigation"
+        >
+          <span class="navbar__tog navbar__tog--top"></span>
+          <span class="navbar__tog navbar__tog--middle"></span>
+          <span class="navbar__tog navbar__tog--bottom"></span>
+        </button>
+        <nav id="nav" class="navbar__nav">
+          <ul class="navbar__list">
+            <li>
+              <a href="./custom-properties.html" class="navbar__link">
+                Custom Properties
+              </a>
+            </li>
+            <li>
+              <a
+                href="./position.html"
+                class="navbar__link"
+                aria-current="page"
+              >
+                Position
+              </a>
+            </li>
+            <li>
+              <a href="./math-functions.html" class="navbar__link">
+                Math Functions
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!--
+      The main contains ALL of the content unique to this page.
+      Every page MUST have exactly one `main` that is a direct child of `body`.
+    -->
+    <main id="main">
+      <header class="banner">
+        <div class="container">
+          <div class="container--text">
+            <h1 class="banner__headline">Position</h1>
+            <div class="banner__byline">
+              <p>
+                The position property allows us to take more direct control over
+                where and how an element is positioned on the page.
+              </p>
+              <p>
+                There are some drawbacks that we need to be very careful of
+                though! For example, when using
+                <code>position: absolute;</code> and
+                <code>position: fixed;</code>, the element is taken out of the
+                standard image rendering order, which can lead to unwanted
+                overlapping and hard to manage content/layouts.
+              </p>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- 
+        ====================================================
+        ============== TUTORIAL CONTENT START ==============
+        ====================================================
+      -->
+
+      <section>
+        <div class="container">
+          <h2>Position Basics</h2>
+
+          <div class="parent position-wrapper">
+            <div class="box box--positioned">Positioned</div>
+            <div class="box box--absolute">Absolute</div>
+            <div class="box box--fixed">Fixed</div>
+            <div class="box">He's just a box</div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <h2>Centering With Position + Transform</h2>
+
+          <div class="parent position-centering">
+            <div class="box box--centered">Center Me!</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 
+        ====================================================
+        =============== TUTORIAL CONTENT END ===============
+        ====================================================
+      -->
+
+      <section>
+        <div class="container">
+          <div class="container--text">
+            <h2>Filler text to allow lot's of scrolling</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
+              molestias libero quaerat distinctio porro sequi dolores, iste
+              consequatur harum reprehenderit quia inventore ad tempora ducimus
+              voluptatum quos, atque architecto ab.
+            </p>
+            <p>
+              Facere obcaecati, dolorem aut praesentium quaerat quidem quos
+              voluptatem illo accusamus neque esse veritatis soluta illum nisi
+              consequuntur consectetur aspernatur? Sunt illo dolores laboriosam
+              provident numquam cumque tempore quisquam voluptatum!
+            </p>
+            <p>
+              Dolor sequi quod quos sint, numquam nihil cupiditate. Suscipit
+              ullam amet aut at nulla ipsa veritatis laboriosam temporibus
+              soluta aliquam error excepturi atque iste voluptates dolore quo,
+              aperiam sed porro!
+            </p>
+            <p>
+              Maiores assumenda officia corrupti itaque laborum, vero amet,
+              placeat eligendi odit eaque ratione vitae cumque dolorum
+              consequuntur, necessitatibus odio quam? Officia ex, ipsa cumque
+              qui debitis adipisci laboriosam minus voluptates?
+            </p>
+            <p>
+              Optio quia veniam, sapiente totam corrupti aspernatur itaque
+              officiis facere, pariatur sunt dicta. Expedita repudiandae odit
+              ea, suscipit, temporibus ratione ad quas ex et sequi eligendi esse
+              asperiores, sunt consequuntur.
+            </p>
+            <p>
+              Earum, inventore sunt cupiditate aperiam pariatur laudantium
+              praesentium corrupti eius blanditiis dolorem voluptas nostrum
+              suscipit numquam hic minima tempora enim molestias esse repellat
+              perspiciatis ipsam illo temporibus mollitia aliquid. Totam!
+            </p>
+            <p>
+              Facere illo nihil dicta libero accusantium asperiores laborum
+              quibusdam inventore at a? Officia delectus iste corporis et
+              deserunt a? Molestiae maxime harum sed magni magnam explicabo aut
+              inventore, quasi dolores.
+            </p>
+            <p>
+              Natus ipsa itaque porro omnis debitis fugit autem expedita
+              voluptatem temporibus velit! Non temporibus hic at qui laboriosam
+              reiciendis officia sunt sequi cupiditate impedit quibusdam optio
+              tempora, dicta eaque dolor.
+            </p>
+            <p>
+              Nemo ad voluptas maiores sequi provident ullam reprehenderit neque
+              mollitia vero praesentium, quod quibusdam, perferendis minus sit
+              autem. Illum illo esse consequatur cumque, eaque atque corrupti
+              mollitia dolorem quidem ipsa?
+            </p>
+            <p>
+              Vel, atque. Atque suscipit praesentium aut exercitationem debitis
+              ad aliquid blanditiis similique modi. Sit perspiciatis impedit ex
+              veritatis rerum, assumenda nemo hic? Deserunt atque quos numquam,
+              minima rem cumque ipsam.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!--
+      Site footer. Contains site logo and legal info.
+      
+      Could also contain other concluding information such
+      as repeating the navigation, contact info, and more.
+    -->
+    <footer class="footer">
+      <div class="container container--grid">
+        <div class="footer__column">
+          <a href="/" class="footer__logo">
+            <span class="footer__week">Week 6</span>
+            <span class="footer__title">
+              Custom Properties &amp;&nbsp;Other&nbsp;Tidbits
+            </span>
+          </a>
+        </div>
+
+        <div class="footer__column footer__column--legal">
+          <small>
+            Created for
+            <a href="https://mad9013.github.io/F2023/">MAD9013 course</a> and
+            free for any use.
+          </small>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Accessibility feature: return to top button -->
+    <a href="#page" class="to-top">To Top</a>
+
+    <!--
+      Adds a layer when the mobile navigation is open that
+      allows users to click to the side and auto close the nav
+    -->
+    <div class="click-to-close"></div>
+
+    <!-- Loads custom JavaScript file -->
+    <script src="./js/main.js"></script>
+  </body>
+</html>
