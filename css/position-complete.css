@@ -44,3 +44,73 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+/* ---------- Full Card Hover ---------- */
+
+.card-group {
+  --cols: 1;
+  display: grid;
+  grid-template-columns: repeat(var(--cols), 1fr);
+  gap: 1.5rem;
+
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+
+  @media only screen and (min-width: 45rem) {
+    --cols: 2;
+  }
+
+  @media only screen and (min-width: 60rem) {
+    --cols: 3;
+  }
+}
+
+.card {
+  --color-card: var(--color-primary);
+  border: 0.25rem solid var(--color-card);
+  border-radius: var(--radius);
+  transition: all var(--transition);
+  box-shadow: var(--shadow);
+
+  /* Basic card styles */
+  display: block;
+  color: #000;
+  background-color: #fff;
+  text-decoration: none;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+
+  &:where(a:hover, a:focus-visible, :focus-within),
+  &:has(a:hover) {
+    box-shadow: var(--shadow--large);
+
+    --color-card: var(--color-primary--light);
+  }
+}
+
+.card__image {
+  img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+  }
+}
+
+.card__title {
+  color: var(--color-card);
+  transition: color var(--transition);
+}
+
+.card__content .btn {
+  background-color: var(--color-card);
+  border-color: var(--color-card);
+}
+
+.card__link::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  inset: 0;
+}

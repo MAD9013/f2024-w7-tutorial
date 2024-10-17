@@ -5,8 +5,9 @@
   --color-primary: #23272e;
   --color-primary--light: #303641;
   --color-primary--dark: #21252c;
-  --color-secondary: #54a04a;
-  --color-secondary--dark: #42813a;
+  --color-secondary: #4aa092;
+  --color-secondary--light: #73cbbc;
+  --color-secondary--dark: #327469;
   --color-red: #d86972;
   --color-red--dark: #a94c54;
   --color-orange: #bb8b5e;
@@ -45,19 +46,33 @@
 
 .color-scheme-alt {
   --color-primary: #d42199;
+  --color-primary--light: #ec68c0;
   --color-secondary: #4838b2;
+  --color-secondary--light: #6f5fd6;
 }
 
 /* ---------- Color Theming ---------- */
 
 .card-group {
-  display: flex;
-  flex-wrap: wrap;
+  --cols: 1;
+  display: grid;
+  grid-template-columns: repeat(var(--cols), 1fr);
   gap: 1.5rem;
+
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+
+  @media only screen and (min-width: 45rem) {
+    --cols: 2;
+  }
+
+  @media only screen and (min-width: 60rem) {
+    --cols: 3;
+  }
 }
 
 .card {
-  /* Styles to be edited */
   --color-card: var(--color-primary);
   border: 0.25rem solid var(--color-card);
   border-radius: var(--radius);
@@ -67,19 +82,29 @@
   /* Basic card styles */
   display: block;
   color: #000;
+  background-color: #fff;
   text-decoration: none;
   overflow: hidden;
   width: 100%;
-  flex: 1 1 15rem;
+
+  &:where(:hover, :focus-visible) {
+    box-shadow: var(--shadow--large);
+
+    --color-card: var(--color-primary--light);
+  }
 }
 
-.card:hover,
-.card:focus-visible {
-  box-shadow: var(--shadow--large);
+.card__image {
+  img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+  }
 }
 
 .card__title {
   color: var(--color-card);
+  transition: color var(--transition);
 }
 
 .card__content .btn {
@@ -89,4 +114,8 @@
 
 .card--secondary {
   --color-card: var(--color-secondary);
+
+  &:where(:hover, :focus-visible) {
+    --color-card: var(--color-secondary--light);
+  }
 }
